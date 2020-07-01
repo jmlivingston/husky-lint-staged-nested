@@ -24,7 +24,11 @@
     "lint": "eslint \"{web-app/src,web-app/scripts}/**/*.js\" --fix --max-warnings=0"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "no-console": 1,
+      "no-debugger": 1
+    }
   },
   "browserslist": {
     "production": [
