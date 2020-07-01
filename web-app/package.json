@@ -29,6 +29,13 @@
     "semi": false,
     "singleQuote": true
   },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "no-console": 1,
+      "no-debugger": 1
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,json,jsx,css,scss,md}": "prettier --write",
     "src/**/*.{js,jsx}": "npm run lint"
