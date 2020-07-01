@@ -15,7 +15,7 @@
       "post-checkout": "if [[ $HUSKY_GIT_PARAMS  =~ 1$ ]]; then npm install --no-package-lock; fi",
       "post-merge": "npm install --no-package-lock",
       "post-rebase": "npm install --no-package-lock",
-      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
+      "pre-commit": "lerna run --concurrency 1 --stream lint --since HEAD --exclude-dependents"
     }
   }
 }
