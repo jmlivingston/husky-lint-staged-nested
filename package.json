@@ -5,5 +5,33 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "web-app/src/**/*.{js,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "web-app/src/**/*.js": [
+      "cd web-app && npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "post-checkout": "if [[ $HUSKY_GIT_PARAMS  =~ 1$ ]]; then npm install --no-package-lock; fi",
+      "post-merge": "npm install --no-package-lock",
+      "post-rebase": "npm install --no-package-lock",
+      "pre-commit": "lint-staged"
+    }
+  }
 }

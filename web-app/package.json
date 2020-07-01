@@ -10,11 +10,6 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "devDependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -41,28 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "prettier": {
-    "printWidth": 100,
-    "semi": false,
-    "singleQuote": true
-  },
-  "lint-staged": {
-    "./src/**/*.{js,json,css,scss,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "./src/**/*.js": [
-      "npm run lint",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "post-checkout": "if [[ $HUSKY_GIT_PARAMS  =~ 1$ ]]; then npm install --no-package-lock; fi",
-      "post-merge": "npm install --no-package-lock",
-      "post-rebase": "npm install --no-package-lock",
-      "pre-commit": "lint-staged"
-    }
   }
 }
