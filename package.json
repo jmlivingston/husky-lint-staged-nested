@@ -17,10 +17,10 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "web-app/src/**/*.{js,json,css,scss,md}": [
+    "web-app/src/**/*.{js,json,jsx,css,scss,md}": [
       "prettier --write"
     ],
-    "web-app/src/**/*.js": [
+    "web-app/src/**/*.{js,jsx}": [
       "cd web-app && npm run lint"
     ]
   },
