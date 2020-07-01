@@ -38,7 +38,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,json,jsx,css,scss,md}": "prettier --write",
-    "src/**/*.{js,jsx}": "npm run lint"
+    "src/**/*.{js,jsx}": "eslint \"{src,scripts}/**/*.js\" --max-warnings=0"
   },
   "browserslist": {
     "production": [
