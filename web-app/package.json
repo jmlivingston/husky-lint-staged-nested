@@ -20,7 +20,6 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   },
   "prettier": {
