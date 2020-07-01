@@ -8,6 +8,7 @@
   "license": "ISC",
   "devDependencies": {
     "husky": "^4.2.5",
+    "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   },
@@ -16,20 +17,12 @@
     "semi": false,
     "singleQuote": true
   },
-  "lint-staged": {
-    "web-app/src/**/*.{js,json,jsx,css,scss,md}": [
-      "prettier --write"
-    ],
-    "web-app/src/**/*.{js,jsx}": [
-      "cd web-app && npm run lint"
-    ]
-  },
   "husky": {
     "hooks": {
       "post-checkout": "if [[ $HUSKY_GIT_PARAMS  =~ 1$ ]]; then npm install --no-package-lock; fi",
       "post-merge": "npm install --no-package-lock",
       "post-rebase": "npm install --no-package-lock",
-      "pre-commit": "lint-staged"
+      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
     }
   }
 }
