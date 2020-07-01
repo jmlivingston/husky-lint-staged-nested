@@ -2,7 +2,7 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-console.log('xx')
+console.log('xxx')
 
 function App() {
   return (
