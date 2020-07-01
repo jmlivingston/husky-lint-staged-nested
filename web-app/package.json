@@ -27,10 +27,10 @@
     }
   },
   "lint-staged": {
-    "web-app/src/**/*.{js,json,jsx,css,scss,md}": [
+    "src/**/*.{js,json,jsx,css,scss,md}": [
       "prettier --write"
     ],
-    "web-app/src/**/*.{js,jsx}": [
+    "src/**/*.{js,jsx}": [
       "npm run lint"
     ]
   },
