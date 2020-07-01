@@ -21,7 +21,8 @@
   },
   "devDependencies": {
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
   },
   "prettier": {
     "printWidth": 100,
